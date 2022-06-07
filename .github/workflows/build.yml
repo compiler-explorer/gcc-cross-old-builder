@@ -19,8 +19,8 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: compilerexplorer/gcc-cross-builder-old:latest
-        cache-from: type=registry,ref=compilerexplorer/gcc-cross-builder-old:latest
+        tags: compilerexplorer/gcc-cross-old-builder:latest
+        cache-from: type=registry,ref=compilerexplorer/gcc-cross-old-builder:latest
         cache-to: type=inline
     - name: Docker Hub Image Digest
       run: echo ${{ steps.hub_build.outputs.digest }}
